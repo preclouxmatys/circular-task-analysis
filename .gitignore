@@ -1,0 +1,12 @@
+# Python/Jupyter
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.env
+.venv/
+
+# OS
+.DS_Store
+
+# Plots/artefacts lourds
+output/
