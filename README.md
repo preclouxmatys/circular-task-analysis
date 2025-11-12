@@ -6,7 +6,6 @@ Assignment MOTTET — reproduce figures, recompute markers table, and run on sel
 - `data/` — raw CSV provided + your own recording
 - `notebooks/` — analysis notebooks (numpy + matplotlib only)
 - `src/` — helper python functions (pure numpy)
-- `report/` — final short HTML report (index.html)
 
 ## Requirements
 - python 3.x
