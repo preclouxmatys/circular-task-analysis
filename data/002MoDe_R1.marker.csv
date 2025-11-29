@@ -1,44 +1,39 @@
 software mouseReMoCo;version 1.3.0;isWithLSL false;screenWidth 1447;screenHeight 736;centerX 723;centerY 368;autoStart 3600;cycleMaxNumber 6;cycleDuration 20;borderColor java.awt.Color[r=255,g=255,b=255];textColor java.awt.Color[r=255,g=255,b=255];backgroundColor java.awt.Color[r=0,g=0,b=0];cursorColorRecord java.awt.Color[r=255,g=0,b=0];cursorColorWait java.awt.Color[r=255,g=255,b=0];task circular;cornerX 435;cornerY 80;externalRadius 288;internalRadius 208;borderRadius 1;cursorRadius 16;indexOfDifficulty 33.086986458020164;taskRadius 247.5;taskTolerance 47
-2025-11-29 14:48:45.048 +0100
+2025-11-29 15:27:31.711 +0100
 
-2025-11-29 14:48:47.193 +0100,1764424127193,KeyTyped=32 ASCI=  DoCycleChange
-2025-11-29 14:48:47.193 +0100,1764424127193,DoCycleChange:DoStartCycleTimedSequence
-2025-11-29 14:48:47.193 +0100,1764424127193,DoCycleChange:DoRecord RecordDone=0 PauseDone=0 ToDo=6
-2025-11-29 14:49:07.208 +0100,1764424147208,DoCycleChange:DoPause RecordDone=1 PauseDone=0 ToDo=6
-2025-11-29 14:49:27.214 +0100,1764424167214,DoCycleChange:DoRecord RecordDone=1 PauseDone=1 ToDo=6
-2025-11-29 14:49:47.216 +0100,1764424187216,DoCycleChange:DoPause RecordDone=2 PauseDone=1 ToDo=6
-2025-11-29 14:49:53.533 +0100,1764424193533,KeyTyped=32 ASCI=  DoCycleChange
-2025-11-29 14:49:53.533 +0100,1764424193533,DoCycleChange:DoRecord RecordDone=2 PauseDone=2 ToDo=6
-2025-11-29 14:50:13.551 +0100,1764424213551,DoCycleChange:DoPause RecordDone=3 PauseDone=2 ToDo=6
-2025-11-29 14:50:15.209 +0100,1764424215209,KeyTyped=32 ASCI=  DoCycleChange
-2025-11-29 14:50:15.209 +0100,1764424215209,DoCycleChange:DoRecord RecordDone=3 PauseDone=3 ToDo=6
-2025-11-29 14:50:35.226 +0100,1764424235226,DoCycleChange:DoPause RecordDone=4 PauseDone=3 ToDo=6
-2025-11-29 14:50:38.928 +0100,1764424238928,KeyTyped=32 ASCI=  DoCycleChange
-2025-11-29 14:50:38.928 +0100,1764424238928,DoCycleChange:DoRecord RecordDone=4 PauseDone=4 ToDo=6
-2025-11-29 14:50:58.941 +0100,1764424258941,DoCycleChange:DoPause RecordDone=5 PauseDone=4 ToDo=6
-2025-11-29 14:51:01.907 +0100,1764424261907,KeyTyped=32 ASCI=  DoCycleChange
-2025-11-29 14:51:01.907 +0100,1764424261907,DoCycleChange:DoRecord RecordDone=5 PauseDone=5 ToDo=6
-2025-11-29 14:51:21.925 +0100,1764424281925,DoCycleChange:DoPause RecordDone=6 PauseDone=5 ToDo=6
-2025-11-29 14:51:26.494 +0100,1764424286494,KeyTyped=32 ASCI=  DoCycleChange
-2025-11-29 14:51:26.494 +0100,1764424286494,DoCycleChange:DoEndPause RecordDone=6 PauseDone=6 ToDo=6
-2025-11-29 14:51:26.494 +0100,1764424286494,
+2025-11-29 15:27:35.102 +0100,1764426455102,KeyTyped=32 ASCI=  DoCycleChange
+2025-11-29 15:27:35.102 +0100,1764426455102,DoCycleChange:DoStartCycleTimedSequence
+2025-11-29 15:27:35.102 +0100,1764426455102,DoCycleChange:DoRecord RecordDone=0 PauseDone=0 ToDo=6
+2025-11-29 15:27:55.115 +0100,1764426475115,DoCycleChange:DoPause RecordDone=1 PauseDone=0 ToDo=6
+2025-11-29 15:28:15.128 +0100,1764426495128,DoCycleChange:DoRecord RecordDone=1 PauseDone=1 ToDo=6
+2025-11-29 15:28:35.142 +0100,1764426515142,DoCycleChange:DoPause RecordDone=2 PauseDone=1 ToDo=6
+2025-11-29 15:28:55.155 +0100,1764426535155,DoCycleChange:DoRecord RecordDone=2 PauseDone=2 ToDo=6
+2025-11-29 15:29:15.164 +0100,1764426555164,DoCycleChange:DoPause RecordDone=3 PauseDone=2 ToDo=6
+2025-11-29 15:29:35.178 +0100,1764426575178,DoCycleChange:DoRecord RecordDone=3 PauseDone=3 ToDo=6
+2025-11-29 15:29:55.192 +0100,1764426595192,DoCycleChange:DoPause RecordDone=4 PauseDone=3 ToDo=6
+2025-11-29 15:30:15.206 +0100,1764426615206,DoCycleChange:DoRecord RecordDone=4 PauseDone=4 ToDo=6
+2025-11-29 15:30:35.222 +0100,1764426635222,DoCycleChange:DoPause RecordDone=5 PauseDone=4 ToDo=6
+2025-11-29 15:30:55.233 +0100,1764426655233,DoCycleChange:DoRecord RecordDone=5 PauseDone=5 ToDo=6
+2025-11-29 15:31:15.236 +0100,1764426675236,DoCycleChange:DoPause RecordDone=6 PauseDone=5 ToDo=6
+2025-11-29 15:31:35.235 +0100,1764426695235,DoCycleChange:DoEndPause RecordDone=6 PauseDone=6 ToDo=6
+2025-11-29 15:31:35.235 +0100,1764426695235,
     Var , nLaps ,      Re ,      Te ,   error ,  MT/lap , IDe/lap ,      Be ,     IPe ,
    unit ,   lap ,   pixel ,   pixel ,       % ,   s/lap , bit/lap ,  double ,   bit/s ,
  Theory ,  1.00 ,  247.50 ,   47.00 ,    3.88 ,         ,         ,    1.00 ,         ,
- Rec001 , -4.93 ,  251.35 ,   56.71 ,   11.64 ,    3.98 ,   27.85 ,    1.21 ,    7.00 ,
- Rec002 , -4.98 ,  246.37 ,   44.91 ,    0.87 ,    3.98 ,   34.47 ,    0.96 ,    8.66 ,
- Rec003 , -8.00 ,  244.00 ,   63.50 ,   14.38 ,    2.46 ,   24.14 ,    1.35 ,    9.81 ,
- Rec004 , -8.25 ,  240.30 ,   86.71 ,   27.67 ,    2.42 ,   17.41 ,    1.84 ,    7.19 ,
- Rec005 , -9.81 ,  240.56 ,   60.93 ,   16.79 ,    2.00 ,   24.81 ,    1.30 ,   12.42 ,
- Rec006 ,-11.66 ,  241.87 ,   77.13 ,   28.46 ,    1.66 ,   19.70 ,    1.64 ,   11.89 ,
-2025-11-29 14:51:29.631 +0100,1764424289631,KeyTyped=113 ASCI=q WINDOW_CLOSING
-2025-11-29 14:51:29.631 +0100,1764424289631,
+ Rec001 , -4.65 ,  250.00 ,   51.56 ,    6.04 ,    4.29 ,   30.46 ,    1.10 ,    7.10 ,
+ Rec002 , -5.05 ,  242.84 ,   54.17 ,    8.29 ,    3.81 ,   28.16 ,    1.15 ,    7.40 ,
+ Rec003 , -4.03 ,  245.71 ,   42.57 ,    0.74 ,    4.70 ,   36.27 ,    0.91 ,    7.71 ,
+ Rec004 , -4.38 ,  241.94 ,   42.35 ,    4.07 ,    4.49 ,   35.90 ,    0.90 ,    8.00 ,
+ Rec005 , -5.53 ,  239.13 ,   54.41 ,   15.59 ,    3.48 ,   27.62 ,    1.16 ,    7.94 ,
+ Rec006 , -4.78 ,  241.15 ,   54.09 ,   11.97 ,    4.02 ,   28.01 ,    1.15 ,    6.96 ,
+2025-11-29 15:31:37.670 +0100,1764426697670,KeyTyped=113 ASCI=q WINDOW_CLOSING
+2025-11-29 15:31:37.686 +0100,1764426697686,
     Var , nLaps ,      Re ,      Te ,   error ,  MT/lap , IDe/lap ,      Be ,     IPe ,
    unit ,   lap ,   pixel ,   pixel ,       % ,   s/lap , bit/lap ,  double ,   bit/s ,
  Theory ,  1.00 ,  247.50 ,   47.00 ,    3.88 ,         ,         ,    1.00 ,         ,
- Rec001 , -4.93 ,  251.35 ,   56.71 ,   11.64 ,    3.98 ,   27.85 ,    1.21 ,    7.00 ,
- Rec002 , -4.98 ,  246.37 ,   44.91 ,    0.87 ,    3.98 ,   34.47 ,    0.96 ,    8.66 ,
- Rec003 , -8.00 ,  244.00 ,   63.50 ,   14.38 ,    2.46 ,   24.14 ,    1.35 ,    9.81 ,
- Rec004 , -8.25 ,  240.30 ,   86.71 ,   27.67 ,    2.42 ,   17.41 ,    1.84 ,    7.19 ,
- Rec005 , -9.81 ,  240.56 ,   60.93 ,   16.79 ,    2.00 ,   24.81 ,    1.30 ,   12.42 ,
- Rec006 ,-11.66 ,  241.87 ,   77.13 ,   28.46 ,    1.66 ,   19.70 ,    1.64 ,   11.89 ,
+ Rec001 , -4.65 ,  250.00 ,   51.56 ,    6.04 ,    4.29 ,   30.46 ,    1.10 ,    7.10 ,
+ Rec002 , -5.05 ,  242.84 ,   54.17 ,    8.29 ,    3.81 ,   28.16 ,    1.15 ,    7.40 ,
+ Rec003 , -4.03 ,  245.71 ,   42.57 ,    0.74 ,    4.70 ,   36.27 ,    0.91 ,    7.71 ,
+ Rec004 , -4.38 ,  241.94 ,   42.35 ,    4.07 ,    4.49 ,   35.90 ,    0.90 ,    8.00 ,
+ Rec005 , -5.53 ,  239.13 ,   54.41 ,   15.59 ,    3.48 ,   27.62 ,    1.16 ,    7.94 ,
+ Rec006 , -4.78 ,  241.15 ,   54.09 ,   11.97 ,    4.02 ,   28.01 ,    1.15 ,    6.96 ,
