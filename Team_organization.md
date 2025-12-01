@@ -1,17 +1,22 @@
 # To do list
 
+## General: 
+- Add clear titles in markdown before the cells
+- Make sure everything is in English
+- Add clear docstring for the functions ( with the inputs and outputs)
+
 ## Redo graphs
-- Raw time series data  **--> Almost done, we need to put the labels at the top and check the little details to see if everything's alright.**
+- Raw time series data  **--> Done**
 - Raw trajectory (x, y) **--> to do**
 - Screen "model" (in pixels)
-- 3 subplot : **--> Almost done, we need to change to linestyle to dots and check where the labels should be and should look like**
+- 3 subplot : **--> Done**
   - x position
   - y position
   - "Mouse in target", binary representation (1 = in ; 0 = out)
-+ print (Header line, Marker...) --> whats that ?
++ print (Header line, Marker...) **--> Done**
 
 ## Redo table "marker" 
-**--> MAtys has done that i think**
+**Done**
 - nLap = nb de tour
 - Re = Effective radius
 - Te = Effective tolerance
