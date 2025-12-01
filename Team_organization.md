@@ -7,7 +7,7 @@
 
 ## Redo graphs
 - Raw time series data  **--> Done**
-- Raw trajectory (x, y) **--> to do**
+- Raw trajectory (x, y) **--> Done**
 - Screen "model" (in pixels)
 - 3 subplot : **--> Done**
   - x position
