@@ -1,18 +1,33 @@
 # Circular Task Analysis
 
-Assignment MOTTET — reproduce figures, recompute markers table, and run on self-recorded data.
+**Authors:** Léa PONS — Matys PRÉCLOUX — Delphine HUND  
+**Assignment (D. MOTTET):** reproduce figures, recompute the markers table, and run the analysis on self-recorded data.
 
-## Structure
-- `data/` — raw CSV provided + your own recording
-- `notebooks/` — analysis notebooks (numpy + matplotlib only)
-- `src/` — helper python functions (pure numpy)
+---
+
+## Project Structure
+
+### `data/`
+Contains two types of datasets:
+- **001\_*** → provided CSV files  
+- **002\_*** → our own recorded data
+
+### `notebooks/`
+Analysis notebooks (NumPy + Matplotlib only):
+- **001\_*** → analysis based on the provided data  
+- **002\_*** → analysis based on our own recording
+
+---
+
+## How to Run
+
+To execute the entire workflow, run the **main notebook/script** at the root of the repository.  
+It automatically triggers all related notebooks and reproduces the full analysis.
+
+---
 
 ## Requirements
-- python 3.x
-- numpy
-- matplotlib
 
-## How to run
-1. `python -m venv .venv && source .venv/bin/activate`
-2. `pip install numpy matplotlib`
-3. Open `notebooks/01_analysis.ipynb` and run the cells.
+- Python 3.x  
+- NumPy  
+- Matplotlib  
