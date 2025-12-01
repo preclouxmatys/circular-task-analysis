@@ -21,7 +21,7 @@ Analysis notebooks (NumPy + Matplotlib only):
 
 ## How to Run
 
-To execute the entire workflow, run the **main notebook** `main.ipynb` at the root of the repository.  
+To execute the entire workflow, run the `main.ipynb` notebook at the root of the repository.  
 It automatically triggers all related notebooks and reproduces the full analysis.
 
 ---
