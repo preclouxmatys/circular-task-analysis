@@ -7570,15 +7570,19 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.-Time-Conversion">1. Time Conversion<a class="anchor-link" href="#1.-Time-Conversion">¶</a></h2><h3 id="Problem"><a id="problem-time"></a>Problem<a class="anchor-link" href="#Problem">¶</a></h3><p>The time values in the dataset did not correspond to a normal time scale (seconds).
-When plotting them directly, the x-axis appeared broken, extremely large, and unusable.</p>
-<h3 id="Cause"><a id="cause-time"></a>Cause<a class="anchor-link" href="#Cause">¶</a></h3><p>The timestamps recorded in the CSV file were absolute system timestamps, corresponding to the computer’s internal clock (i.e., milliseconds since the Unix epoch in 1970). This is not “time since the start of the experiment” but “time since 1 January 1970” — so around 1.6 trillion milliseconds, which completely breaks the plot.</p>
-<h3 id="Resolution"><a id="resolution-time"></a>Resolution<a class="anchor-link" href="#Resolution">¶</a></h3><p>We converted the absolute timestamps into relative experiment time by:
-1.	Taking the first timestamp t0
-2.	Subtracting it from the whole time series (to set time = 0 at the beginning)
-3.	Dividing by 1000 to convert milliseconds → seconds
-t0 = timestamps_ms[0]
-timestamps = (timestamps_ms - t0) / 1000.0</p>
+<h2 id="1.-Time-Conversion">1. Time Conversion<a class="anchor-link" href="#1.-Time-Conversion">¶</a></h2><h3 id="Problem"><a id="problem-time"></a>Problem<a class="anchor-link" href="#Problem">¶</a></h3><p>The time values in the dataset did not correspond to a normal time scale (seconds).</p>
+<p>When plotting them directly, the x-axis appeared broken, extremely large, and unusable.</p>
+<h3 id="Cause"><a id="cause-time"></a>Cause<a class="anchor-link" href="#Cause">¶</a></h3><p>The timestamps recorded in the CSV file were absolute system timestamps, corresponding to the computer’s internal clock (i.e., milliseconds since the Unix epoch in 1970).</p>
+<p>This is not “time since the start of the experiment” but <strong>“time since 1 January 1970”</strong> — so around 1.6 trillion milliseconds, which completely breaks the plot.</p>
+<h3 id="Resolution"><a id="resolution-time"></a>Resolution<a class="anchor-link" href="#Resolution">¶</a></h3><p>We converted the absolute timestamps into relative experiment time by:</p>
+<ol>
+<li>Taking the first timestamp $t0$</li>
+<li>Subtracting it from the whole time series ($to$ set time = $0$ at the beginning)</li>
+<li>Dividing by $1000$ to convert milliseconds → seconds</li>
+</ol>
+<p>$$
+t = \frac{\text{timestamps\_ms} - t_0}{1000}
+$$</p>
 <p>This produced a clean, correct time axis from 0 to ~180 seconds.</p>
 </div>
 </div>
@@ -7590,17 +7594,20 @@ timestamps = (timestamps_ms - t0) / 1000.0</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="2.-Formulas-in-the-Markers-Table">2. Formulas in the Markers Table<a class="anchor-link" href="#2.-Formulas-in-the-Markers-Table">¶</a></h2><h3 id="Problem"><a id="problem-formulas"></a>Problem<a class="anchor-link" href="#Problem">¶</a></h3><p>The marker table only contained variable names (e.g., nLaps, Re, Te, IDe) without any formulas.
-We needed to reconstruct all metrics from scratch.</p>
-<h3 id="Cause"><a id="cause-formulas"></a>Cause<a class="anchor-link" href="#Cause">¶</a></h3><p>No formulas were provided in the HTML table.
-We only had the names of the variables and their numeric output, but not the computation rules behind them.</p>
+<h2 id="2.-Formulas-in-the-Markers-Table">2. Formulas in the Markers Table<a class="anchor-link" href="#2.-Formulas-in-the-Markers-Table">¶</a></h2><h3 id="Problem"><a id="problem-formulas"></a>Problem<a class="anchor-link" href="#Problem">¶</a></h3><p>The marker table only contained variable names (e.g., $nLaps$, $Re$, $Te$, $IDe$) without any formulas.</p>
+<p>We needed to reconstruct all metrics from scratch.</p>
+<h3 id="Cause"><a id="cause-formulas"></a>Cause<a class="anchor-link" href="#Cause">¶</a></h3><p>No formulas were provided in the HTML table.</p>
+<p>We only had the names of the variables and their numeric output, but not the computation rules behind them.</p>
 <p>Some metrics were easy to guess (mean radius, standard deviation, etc.),
-but others especially Te were non-standard and much harder to infer.</p>
-<h3 id="Resolution"><a id="resolution-formulas"></a>Resolution<a class="anchor-link" href="#Resolution">¶</a></h3><p>Two strategies were used:
-•	Using the poster + AI assistance, we reconstructed most formulas
-•	For the most complex variable (Te), I validated the formula with Tifenn, who helped confirm that the correct expression was:
-Te = sigma * sqrt(2 * pi * e)
-With this, all computed values finally aligned with the marker table.</p>
+but others especially $Te$ were non-standard and much harder to infer.</p>
+<h3 id="Resolution"><a id="resolution-formulas"></a>Resolution<a class="anchor-link" href="#Resolution">¶</a></h3><p>Two strategies were used:</p>
+<ul>
+<li>Using the poster + AI assistance, we reconstructed most formulas</li>
+<li>For the most complex variable ($Te$), we validated the formula with Tifenn Fauviaux, who helped confirm that the correct expression was:</li>
+</ul>
+<p>$Te = \sigma \cdot \sqrt{2 \pi e}$</p>
+<p>where <em>e</em> is the <strong>Euler number</strong> (≈ 2.71828).</p>
+<p>With this, all computed values finally aligned with the marker table.</p>
 </div>
 </div>
 </div>
@@ -7611,26 +7618,28 @@ With this, all computed values finally aligned with the marker table.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="3.-Retrieve-the-Values-from-the-Markers-Table">3. Retrieve the Values from the Markers Table<a class="anchor-link" href="#3.-Retrieve-the-Values-from-the-Markers-Table">¶</a></h2><h3 id="Problem"><a id="problem-values"></a>Problem<a class="anchor-link" href="#Problem">¶</a></h3><p>Our computed values (Re, Te, MT, IPe, etc.) did not match the values shown in the HTML marker table, even though the formulas seemed correct.</p>
+<h2 id="3.-Retrieve-the-Values-from-the-Markers-Table">3. Retrieve the Values from the Markers Table<a class="anchor-link" href="#3.-Retrieve-the-Values-from-the-Markers-Table">¶</a></h2><h3 id="Problem"><a id="problem-values"></a>Problem<a class="anchor-link" href="#Problem">¶</a></h3><p>Our computed values ($Re$, $Te$, $MT$, $IPe$, etc.) did not match the values shown in the HTML marker table, even though the formulas seemed correct.</p>
 <h3 id="Cause"><a id="cause-values"></a>Cause<a class="anchor-link" href="#Cause">¶</a></h3><p>We initially computed all metrics using all data points inside each record, including the beginning of the recording where the cursor was not yet inside the target.</p>
 <p>However, the original software (MouseReMoCo) applies an internal rule:</p>
 <p>Statistics are computed only AFTER the first entry into the target.</p>
-<p>We were mistakenly including the “approach” phase, which greatly distorted:
-•	Re (radius too variable)
-•	Te (variance too high)
-•	nLaps (wrong angular integration)
-•	MT/lap
-•	IPe
-•	Error%
-•	Be</p>
-<h3 id="Resolution"><a id="resolution-values"></a>Resolution<a class="anchor-link" href="#Resolution">¶</a></h3><p>With Lucas (another classmate) we realized the time series had to be filtered like this:
-inside = (in_rec == 1)
-first_inside_idx = np.where(inside)[0][0]</p>
-<p>t = t[first_inside_idx:]
-x = x[first_inside_idx:]
-y = y[first_inside_idx:]
-in_rec = in_rec[first_inside_idx:]
-Once we applied this filtering, all computed values finally matched the marker table.</p>
+<p>We were mistakenly including the “approach” phase, which greatly distorted:</p>
+<ul>
+<li>$Re$ (radius too variable)</li>
+<li>$Te$ (variance too high)</li>
+<li>$nLaps$ (wrong angular integration)</li>
+<li>$MT$/$lap$</li>
+<li>$IPe$</li>
+<li>$Error%$</li>
+<li>$Be$</li>
+</ul>
+<h3 id="Resolution"><a id="resolution-values"></a>Resolution<a class="anchor-link" href="#Resolution">¶</a></h3><p>With Lucas (another classmate) we realized the time series had to be filtered like this:</p>
+<p>inside = (in_rec == 1)</p>
+<p>first_inside_idx = np.where(inside)[0][0]</p>
+<p>t = t[first_inside_idx:]</p>
+<p>x = x[first_inside_idx:]</p>
+<p>y = y[first_inside_idx:]</p>
+<p>in_rec = in_rec[first_inside_idx:]</p>
+<p>Once we applied this filtering, all computed values finally matched the marker table.</p>
 </div>
 </div>
 </div>
@@ -7644,15 +7653,17 @@ Once we applied this filtering, all computed values finally matched the marker t
 <h2 id="4.-Mask-with-Our-Data">4. Mask with Our Data<a class="anchor-link" href="#4.-Mask-with-Our-Data">¶</a></h2><h3 id="Problem"><a id="problem-mask"></a>Problem<a class="anchor-link" href="#Problem">¶</a></h3><p>Between two records (e.g., Record 1 end → Record 2 start), the trajectory contained noise samples, which created overlapping plots and incorrect values.</p>
 <h3 id="Cause"><a id="cause-mask"></a>Cause<a class="anchor-link" href="#Cause">¶</a></h3><p>The raw CSV contains continuous recording data, not 5 isolated segments.
 So between each “Record” and “Pause”, there are background movements and noise.</p>
-<p>If these were not removed, they interfered with:
-•	plot aesthetics
-•	nLaps
-•	MT/lap
-•	error estimates
-•	inside/outside segmentation</p>
-<h3 id="Resolution"><a id="resolution-mask"></a>Resolution<a class="anchor-link" href="#Resolution">¶</a></h3><p>We masked each record separately using the timestamps extracted from the marker file:
-mask = (timestamps &gt;= start) &amp; (timestamps &lt;= end)
-This ensured that each record only contained the exact 20-second task window, with no undesired samples.</p>
+<p>If these were not removed, they interfered with:</p>
+<ul>
+<li>plot aesthetics</li>
+<li>$nLaps$</li>
+<li>$MT$/$lap$</li>
+<li>error estimates</li>
+<li>inside/outside segmentation</li>
+</ul>
+<h3 id="Resolution"><a id="resolution-mask"></a>Resolution<a class="anchor-link" href="#Resolution">¶</a></h3><p>We masked each record separately using the timestamps extracted from the marker file:</p>
+<p>mask = (timestamps &gt;= start) &amp; (timestamps &lt;= end)</p>
+<p>This ensured that each record only contained the exact 20-second task window, with no undesired samples.</p>
 <p>After masking, the trajectory plots became clean, and metric computations became fully consistent with the recorded values.</p>
 </div>
 </div>

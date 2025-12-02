@@ -37,3 +37,12 @@ It automatically triggers all related notebooks and reproduces the full analysis
 - Python 3.x  
 - NumPy  
 - Matplotlib  
+
+## Roles:
+
+- Figure code development (Matys/Léa)
+- Marker code development (Matys)
+- GitHub organization (Delphine/Léa/Matys)
+- Main notebook (Delphine)
+- README (Delphine)
+- New task creation (Léa)
