@@ -40,7 +40,7 @@ It automatically triggers all related notebooks and reproduces the full analysis
 
 ## Roles:
 
-- Figure code development (Matys/Léa)
+- Figure code development (Matys/Léa/Delphine)
 - Marker code development (Matys)
 - GitHub organization (Delphine/Léa/Matys)
 - Main notebook (Delphine)
